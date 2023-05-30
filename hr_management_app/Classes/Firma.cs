@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hr_management_app.Classes
 {
-    internal class Firma
+    public class Firma
     {
 
         private string _denumire;

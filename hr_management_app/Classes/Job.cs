@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace hr_management_app
 {
-    internal class Job: ICalculabil
+    public class Job: ICalculabil
     {
         private string _denumire;
         private float _salariuBaza;
         private int _nrOreSaptamana;
         
+        public Job() { }
+
         public Job(string denumire, float salariuBaza, int nrOreSaptamana) 
         {
             _denumire = denumire;

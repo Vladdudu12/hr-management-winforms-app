@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hr_management_app
 {
-    internal class Concediu
+    public class Concediu
     {
         private DateTime _dataInceput;
         private int _durata;

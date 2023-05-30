@@ -6,15 +6,35 @@ using System.Threading.Tasks;
 
 namespace hr_management_app
 {
-    internal class Angajat : Persoana, ICloneable, IComparable<Angajat>
+    public class Angajat : Persoana, ICloneable, IComparable<Angajat>
     {
         private int _id = 0;
         private int[] _nrOreLucrateSaptamanal;
         private Job _job;
         private List<Feedback> _feedbacks = new List<Feedback>();
         private List<Concediu> _concedii = new List<Concediu>();
+        private string _password;
+        private string _confirmPassword;
+        private string _username;
 
         public Angajat() { }
+
+        public Angajat(int id, int[] nrOreLucrateSaptamanal, Job job, string nume, string prenume, int varsta, string password, string confPassword, string username) : base(nume, prenume, varsta)
+        {
+            _id = id;
+            _nrOreLucrateSaptamanal = new int[nrOreLucrateSaptamanal.Length];
+            for (int i = 0; i < _nrOreLucrateSaptamanal.Length; i++)
+            {
+                _nrOreLucrateSaptamanal[i] = nrOreLucrateSaptamanal[i];
+            }
+
+            _job = job;
+            _password = password;
+            _confirmPassword = confPassword;
+            _username = username;
+
+        }
+
         public Angajat(int id, int[] nrOreLucrateSaptamanal, Job job, List<Feedback> feedbacks, List<Concediu> concedii, string nume, string prenume, int varsta) : base(nume, prenume, varsta)
         { 
             _id = id;

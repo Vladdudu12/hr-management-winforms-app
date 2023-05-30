@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hr_management_app
 {
-    internal class Persoana
+    public class Persoana
     {
         private string _nume;
         private string _prenume;

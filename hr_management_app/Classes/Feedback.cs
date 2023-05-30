@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace hr_management_app
 {
-    internal class Feedback
+    public class Feedback
     {
         private string _detalii;
         private DateTime _data;
